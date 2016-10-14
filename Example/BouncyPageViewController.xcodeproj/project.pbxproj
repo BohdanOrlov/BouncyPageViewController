@@ -218,11 +218,15 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 8U63L82KCQ;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 8U63L82KCQ;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -495,12 +499,15 @@
 			baseConfigurationReference = 1BCFDB107D0A8391A2C56DFB /* Pods-BouncyPageViewController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8U63L82KCQ;
 				INFOPLIST_FILE = BouncyPageViewController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgiggle.Mango.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "38a2802c-779f-4c08-8ff8-9f928a2fe546";
+				PROVISIONING_PROFILE_SPECIFIER = fiesta_devel_manual;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -510,11 +517,12 @@
 			baseConfigurationReference = 2A2AF0E8505012339B181D3F /* Pods-BouncyPageViewController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BouncyPageViewController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgiggle.Mango.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -524,6 +532,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE6346F409D18D4BD04311AD /* Pods-BouncyPageViewController_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 8U63L82KCQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -544,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB89B8FA5F3EF3902BA0C32F /* Pods-BouncyPageViewController_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

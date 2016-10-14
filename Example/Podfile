@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'BouncyPageViewController_Example' do
   pod 'BouncyPageViewController', :path => '../'
-
+  
   target 'BouncyPageViewController_Tests' do
     inherit! :search_paths
 

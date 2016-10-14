@@ -36,7 +36,7 @@ final class PageViewControllerPresenter: NSObject {
 
     func pageViewController(index: Int) -> UIViewController {
         let pageViewController =  UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! ViewController
-        pageViewController.view.backgroundColor = index % 2 == 0 ? UIColor.purple : UIColor.yellow
+        pageViewController.view.backgroundColor = index % 2 == 0 ? UIColor.init(red: 0.8, green: 0.2, blue: 0.4, alpha: 1) : UIColor.white
         pageViewController.todayLabel.text = "Today \(index)"
         return pageViewController
     }
