@@ -10,8 +10,6 @@ import CoreGraphics
 open class BouncyPageViewController: UIViewController {
     //MARK: - VLC
     fileprivate let scrollView = UIScrollView()
-    fileprivate var topBackgroundView = UIView()
-    fileprivate var bottomBackgroundView = UIView()
     fileprivate var backgroundViews: [UIView]!
     open fileprivate(set) var viewControllers: [UIViewController?] = [nil]
     public init(viewControllers: [UIViewController]) {
@@ -27,8 +25,6 @@ open class BouncyPageViewController: UIViewController {
 
     open override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(self.topBackgroundView)
-        self.view.addSubview(self.bottomBackgroundView)
         self.scrollView.panGestureRecognizer.addTarget(self, action: #selector(didPan(recognizer:)))
         self.scrollView.delegate = self
         self.scrollView.decelerationRate = UIScrollViewDecelerationRateFast
@@ -48,8 +44,8 @@ open class BouncyPageViewController: UIViewController {
         }
         self.appendPlaceholdersIfNeeded()
         let rects: (slice: CGRect, remainder: CGRect) = self.view.bounds.divided(atDistance: self.view.bounds.midY, from: .minYEdge)
-        self.topBackgroundView.frame = rects.slice
-        self.bottomBackgroundView.frame = rects.remainder
+//        self.topBackgrounView.frame = rects.slice
+//        self.bottomBackgrounView.frame = rects.remainder
         self.baseOffset = self.pageSize().height
         self.scrollView.frame = self.view.bounds
         self.scrollView.contentSize = CGSize(width: self.view.bounds.width, height: self.pageSize().height * CGFloat(self.maxNumberOfPages()))
@@ -68,22 +64,19 @@ open class BouncyPageViewController: UIViewController {
         for idx in (0..<self.maxNumberOfPages()) {
             var pageOffset = self.pageSize().height * CGFloat(idx)
             let origin = CGPoint(x: 0, y: pageOffset)
-            var pageRect = CGRect(origin: origin, size: self.pageSize())
+            var rect = CGRect(origin: origin, size: self.pageSize())
 
 
             var viewController = self.viewControllers[idx];
-            let vcIsVisible: Bool = self.scrollView.bounds.intersects(pageRect)
+            let vcIsVisible: Bool = self.scrollView.bounds.intersects(rect)
             if viewController == nil && vcIsVisible {
                 viewController = self.requestViewController(index:idx)
                 self.viewControllers[idx] = viewController
             }
-            let backgroundView = self.backgroundViews[idx]
-            backgroundView.frame = pageRect.insetBy(dx: -overlapDelta, dy: 0);
-            backgroundView.isHidden = !vcIsVisible
+            self.backgroundViews[idx].frame = rect;
             if let viewController = viewController {
                 self.addChildPageViewController(viewController: viewController)
-                backgroundView.backgroundColor = viewController.view.backgroundColor
-//                backgroundView.alpha = 0.5
+                self.backgroundViews[idx].backgroundColor = viewController.view.backgroundColor
             }
             let vcShouldWigle = viewController != self.viewControllers.first! && viewController != self.viewControllers.last!
             if let vc = viewController {
@@ -96,16 +89,12 @@ open class BouncyPageViewController: UIViewController {
                 let velocity = self.scrollView.panGestureRecognizer.velocity(in: self.scrollView.panGestureRecognizer.view).y
 //                let velocity:CGFloat = 500.0
 
-                vc.view.frame = pageRect.insetBy(dx: 0, dy: overlapDelta)
-
-                if backgroundView.layer.mask == nil {
-                    let mask = CAShapeLayer()
-                    mask.fillRule = kCAFillRuleEvenOdd
-
+                vc.view.frame = rect.insetBy(dx: 0, dy: -overlapDelta)
+                if let mask = viewController?.view.layer.mask as? CAShapeLayer {
 //                    print(CATransform3DIsIdentity(mask.transform))
-//                    if mask.path == nil {
-                        mask.frame = backgroundView.bounds
-                        var maskRect = backgroundView.bounds.insetBy(dx: -overlapDelta, dy: overlapDelta)
+                    if mask.path == nil {
+                        mask.frame = vc.view.bounds
+                        var maskRect = vc.view.bounds.insetBy(dx: -overlapDelta, dy: overlapDelta)
 //                        if idx == 0 {
 //                            maskRect.origin.y -= overlapDelta
 //                            maskRect.size.height += overlapDelta
@@ -114,8 +103,7 @@ open class BouncyPageViewController: UIViewController {
 //                        }
 
                         mask.path = UIBezierPath(rect: maskRect).cgPath
-//                    backgroundView.layer.mask = mask
-//                    }
+                    }
 //                    let angle:CGFloat = atan(overlapDelta / (vc.view.bounds.width / 2)) * abs(velocity) / 500.0
 ////                    mask.transform = CATransform3DIdentity
 //
@@ -164,6 +152,9 @@ open class BouncyPageViewController: UIViewController {
         viewController.willMove(toParentViewController: self)
         self.addChildViewController(viewController)
         self.scrollView.addSubview(viewController.view)
+        let mask = CAShapeLayer()
+        mask.fillRule = kCAFillRuleEvenOdd
+        viewController.view.layer.mask = mask
         viewController.didMove(toParentViewController: parent)
     }
 
@@ -231,8 +222,8 @@ extension BouncyPageViewController: UIScrollViewDelegate {
             UIView.animate(withDuration: 0.3, animations: {   self.scrollView.contentOffset = CGPoint(x:0, y:self.baseOffset) })
 
         }
-        self.topBackgroundView.backgroundColor = self.vivibleControllers().first!.view.backgroundColor
-        self.bottomBackgroundView.backgroundColor = self.vivibleControllers().last!.view.backgroundColor
+//        self.topBackgrounView.backgroundColor = self.vivibleControllers().first!.view.backgroundColor
+//        self.bottomBackgrounView.backgroundColor = self.vivibleControllers().last!.view.backgroundColor
     }
 
     private func vivibleControllers() -> [UIViewController] {
@@ -253,6 +244,10 @@ extension BouncyPageViewController: UIScrollViewDelegate {
     @objc fileprivate func didPan(recognizer: UIPanGestureRecognizer) {
 
         switch recognizer.state {
+        case .changed:
+            for vc in self.childViewControllers {
+                let mask = vc.view.layer.mask!
+            }
         case .ended, .cancelled, .failed:
             let offset:CGFloat
             if abs(self.baseOffset - self.contentOffset()) < self.baseOffset / 2  {
@@ -276,10 +271,8 @@ extension BouncyPageViewController: UIScrollViewDelegate {
         self.lastVelocity = velocity
         self.lastLocationInView = locationInView
 
-        for view in self.backgroundViews {
-//            guard let mask = view.layer.mask else {
-//                continue;
-//            }
+        for vc in self.childViewControllers {
+            let mask = vc.view.layer.mask!
 //            var bounce = RBBSpringAnimation(keyPath: "transform")
 //            bounce.fromValue = NSValue(caTransform3D: CATransform3DMakeRotation(fromAngle, 0.0, 0.0, 1.0))
 //            bounce.toValue = NSValue(caTransform3D: CATransform3DMakeRotation(toAngle, 0.0, 0.0, 1.0))
@@ -294,7 +287,7 @@ extension BouncyPageViewController: UIScrollViewDelegate {
             bounce.toValue = NSValue(caTransform3D: CATransform3DMakeRotation(toAngle, 0.0, 0.0, 1.0))
             bounce.easing = RBBEasingFunctionEaseOutBounce
             bounce.duration = 1
-            view.layer.add(bounce, forKey: "bounce")
+            mask.add(bounce, forKey: "bounce")
         }
     }
 

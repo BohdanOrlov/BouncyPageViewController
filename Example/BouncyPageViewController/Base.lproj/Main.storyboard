@@ -47,11 +47,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BR2-5c-aDO" firstAttribute="centerY" secondItem="ppF-Mp-aoy" secondAttribute="centerY" id="94c-Lt-GGB"/>
+                            <constraint firstItem="BR2-5c-aDO" firstAttribute="centerY" secondItem="ppF-Mp-aoy" secondAttribute="centerY" constant="-30" id="94c-Lt-GGB"/>
                             <constraint firstItem="Kdr-We-MmS" firstAttribute="centerX" secondItem="ppF-Mp-aoy" secondAttribute="centerX" id="AU3-hr-4Mh"/>
                             <constraint firstItem="BR2-5c-aDO" firstAttribute="centerX" secondItem="ppF-Mp-aoy" secondAttribute="centerX" id="JNc-DL-7YQ"/>
                             <constraint firstItem="Kdr-We-MmS" firstAttribute="width" secondItem="ppF-Mp-aoy" secondAttribute="width" id="NhJ-NB-kIp"/>
-                            <constraint firstItem="HdQ-lZ-LIS" firstAttribute="top" secondItem="Kdr-We-MmS" secondAttribute="bottom" id="aEC-iM-Ncj"/>
+                            <constraint firstItem="HdQ-lZ-LIS" firstAttribute="top" secondItem="Kdr-We-MmS" secondAttribute="bottom" constant="30" id="aEC-iM-Ncj"/>
                         </constraints>
                     </view>
                     <connections>
