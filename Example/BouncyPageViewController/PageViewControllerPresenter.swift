@@ -18,7 +18,7 @@ final class PageViewControllerPresenter: NSObject {
             let pageViewController = self.pageViewController(index: idx)
             pagesQueue.append(pageViewController)
         }
-        let pageViewController = BouncyPageViewController(viewControllers: Array(pagesQueue[2...3]))
+        let pageViewController = BouncyPageViewController(initialPageViewControllers: Array(pagesQueue[2...3]))
         pageViewController.viewControllerAfterViewController = { prevVC in
             if let idx = self.pagesQueue.index(of: prevVC), idx + 1 < self.pagesQueue.count {
                 return self.pagesQueue[idx + 1]
