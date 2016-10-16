@@ -1,0 +1,19 @@
+PODS:
+  - BouncyPageViewController (0.1.0):
+    - RBBAnimation (= 0.4.0)
+  - RBBAnimation (0.4.0)
+
+DEPENDENCIES:
+  - BouncyPageViewController (from `../`)
+
+EXTERNAL SOURCES:
+  BouncyPageViewController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BouncyPageViewController: 74a3511a449907d40506c2e710d1a2377cfd5770
+  RBBAnimation: 4b2d66f6d993febce63cd564da934985313b9c59
+
+PODFILE CHECKSUM: 1730e0eec1412d843841bceaeac4f59eb94926cc
+
+COCOAPODS: 1.1.0.rc.2

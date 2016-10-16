@@ -13,11 +13,11 @@ public class BouncyPageViewController: UIViewController, UIScrollViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
 
-    public init(initialPageViewControllers: [UIViewController]) {
-        self.initialPageViewControllers = initialPageViewControllers
+    public init(initialViewControllers: [UIViewController]) {
+        self.initialViewControllers = initialViewControllers
         super.init(nibName: nil, bundle: nil)
     }
-    private var initialPageViewControllers: [UIViewController]!
+    private var initialViewControllers: [UIViewController]!
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,26 +27,31 @@ public class BouncyPageViewController: UIViewController, UIScrollViewDelegate {
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.addBackgroundViewsIfNeeded()
-        self.preparePageViewControllersIfNeeded()
+        self.prepareViewControllersIfNeeded()
         self.layoutScrollView()
 
     }
 
     private func layoutScrollView() {
+        self.scrollView.delegate = self
         self.scrollView.frame = self.view.bounds
         self.scrollView.contentSize = CGSize(width: self.view.bounds.width, height: self.pageSize().height * CGFloat(self.maxNumberOfPages()))
         self.scrollView.contentOffset = CGPoint(x:0, y:self.baseOffset())
+        self.scrollView.showsVerticalScrollIndicator = false
     }
 
     //MARK: - Public
     public var viewControllerBeforeViewController: ((UIViewController) -> UIViewController?)!
     public var viewControllerAfterViewController: ((UIViewController) -> UIViewController?)!
+    public typealias Offset = CGFloat
+    public typealias Progress = CGFloat
+    public var didScroll: ((BouncyPageViewController, Offset,  Progress) -> Void)?
     public var pageContentInset: CGFloat = 30
     public var pageBounceAnimationDuration: TimeInterval = 1
     public var overscrollBounceMultiplier: CGFloat = 0.5
 
     public func visibleControllers() -> [UIViewController] {
-        return self.pageViewControllers.flatMap {
+        return self.viewControllers.flatMap {
             if let vc = $0, vc.view.isHidden == false {
                 return vc
             }
@@ -57,7 +62,6 @@ public class BouncyPageViewController: UIViewController, UIScrollViewDelegate {
     //MARK: - Private
     private func addScrollView() -> Void {
         self.scrollView.panGestureRecognizer.addTarget(self, action: #selector(didPan(recognizer:)))
-        self.scrollView.delegate = self
         self.scrollView.decelerationRate = UIScrollViewDecelerationRateFast
         self.view.addSubview(self.scrollView)
     }
@@ -74,44 +78,46 @@ public class BouncyPageViewController: UIViewController, UIScrollViewDelegate {
     }
     private var backgroundViews: [UIView]!
 
-    private func preparePageViewControllersIfNeeded() {
-        if self.pageViewControllers?.count == self.maxNumberOfPages()  {
+    private func prepareViewControllersIfNeeded() {
+        if self.viewControllers?.count == self.maxNumberOfPages()  {
             return
         }
-        assert(initialPageViewControllers.count == self.numberOfVisiblePages(), "All initially visible page controllers must be provided")
+        assert(initialViewControllers.count == self.numberOfVisiblePages(), "All initially visible page controllers must be provided")
         // Constructing model for storing pages view controllers.
         // Symbol | shows boundary of the "viewport":
         // [nil]|[VC][VC]|[nil]
         let initialPage: [UIViewController?] = [nil]
-        self.pageViewControllers = initialPage + self.initialPageViewControllers.map(Optional.init)
-        self.initialPageViewControllers = nil
-        while self.pageViewControllers.count < self.maxNumberOfPages() {
-            self.pageViewControllers.append(nil)
+        self.viewControllers = initialPage + self.initialViewControllers.map(Optional.init)
+        self.initialViewControllers = nil
+        while self.viewControllers.count < self.maxNumberOfPages() {
+            self.viewControllers.append(nil)
         }
     }
-    private(set) var pageViewControllers: [UIViewController?]!
+    private(set) var viewControllers: [UIViewController?]!
 
     //MARK: - On Did Scroll
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        self.shiftPageViewControllerIfNeeded()
+        self.shiftViewControllerIfNeeded()
         self.resetScrollViewContentOffsetIfNeeded()
         self.layoutPages()
         if self.overscrolledToTop() || self.overscrolledToBottom() {
             self.bounce()
         }
+        let offset = self.contentOffset() - self.baseOffset()
+        self.didScroll?(self, offset, abs(offset) / self.pageSize().height)
     }
 
-    private func shiftPageViewControllerIfNeeded() {
+    private func shiftViewControllerIfNeeded() {
         if self.scrolledToNextPage() {
-            if let removedVC = self.pageViewControllers.removeFirst() {
-                self.removeChild(pageViewController: removedVC)
+            if let removedVC = self.viewControllers.removeFirst() {
+                self.removeChild(viewController: removedVC)
             }
-            self.pageViewControllers.append(nil)
+            self.viewControllers.append(nil)
         } else if self.scrolledToPreviousPage() {
-            if let removedVC = self.pageViewControllers.removeLast() {
-                self.removeChild(pageViewController: removedVC)
+            if let removedVC = self.viewControllers.removeLast() {
+                self.removeChild(viewController: removedVC)
             }
-            self.pageViewControllers.insert(nil, at: 0)
+            self.viewControllers.insert(nil, at: 0)
         }
     }
 
@@ -144,34 +150,34 @@ public class BouncyPageViewController: UIViewController, UIScrollViewDelegate {
             let origin = CGPoint(x: 0, y: pageOffset)
             let pageRect = CGRect(origin: origin, size: self.pageSize())
             let isPageVisible = self.scrollView.bounds.intersects(pageRect)
-            var viewControllerForPage = self.pageViewControllers[idx];
+            var viewControllerForPage = self.viewControllers[idx];
             if isPageVisible && viewControllerForPage == nil {
-                viewControllerForPage = self.requestPageViewController(index:idx)
+                viewControllerForPage = self.requestViewController(index:idx)
 
             }
             self.backgroundViews[idx].frame = pageRect;
             if let viewController = viewControllerForPage {
-                self.addChild(pageViewController: viewController)
+                self.addChild(viewController: viewController)
                 self.backgroundViews[idx].backgroundColor = viewController.view.backgroundColor
             }
             if let viewControllerForPage = viewControllerForPage {
                 viewControllerForPage.view.isHidden = !isPageVisible
                 viewControllerForPage.view.frame = pageRect.insetBy(dx: 0, dy: -self.pageContentInset)
-                self.addMaskTo(pageViewController: viewControllerForPage)
+                self.addMaskTo(viewController: viewControllerForPage)
             }
         }
     }
 
-    private func addMaskTo(pageViewController: UIViewController) {
-        guard pageViewController.view.layer.mask == nil else {
+    private func addMaskTo(viewController: UIViewController) {
+        guard viewController.view.layer.mask == nil else {
             return
         }
-        let maskRect = pageViewController.view.bounds.insetBy(dx: -self.pageContentInset, dy: self.pageContentInset)
+        let maskRect = viewController.view.bounds.insetBy(dx: -self.pageContentInset, dy: self.pageContentInset)
         let mask = CAShapeLayer()
-        mask.frame = pageViewController.view.bounds
+        mask.frame = viewController.view.bounds
         mask.path = UIBezierPath(rect: maskRect).cgPath
         mask.fillRule = kCAFillRuleEvenOdd
-        pageViewController.view.layer.mask = mask
+        viewController.view.layer.mask = mask
     }
 
     //MARK: - On Did Pan
@@ -196,36 +202,36 @@ public class BouncyPageViewController: UIViewController, UIScrollViewDelegate {
     }
 
     //MARK: - Child view controllers
-    private func addChild(pageViewController: UIViewController){
-        if pageViewController.parent == self {
+    private func addChild(viewController: UIViewController){
+        if viewController.parent == self {
             return
         }
-        pageViewController.willMove(toParentViewController: self)
-        self.addChildViewController(pageViewController)
-        self.scrollView.addSubview(pageViewController.view)
-        pageViewController.didMove(toParentViewController: parent)
+        viewController.willMove(toParentViewController: self)
+        self.addChildViewController(viewController)
+        self.scrollView.addSubview(viewController.view)
+        viewController.didMove(toParentViewController: parent)
     }
 
-    private func removeChild(pageViewController: UIViewController){
-        pageViewController.willMove(toParentViewController: nil)
-        pageViewController.view.removeFromSuperview()
-        pageViewController.removeFromParentViewController()
+    private func removeChild(viewController: UIViewController){
+        viewController.willMove(toParentViewController: nil)
+        viewController.view.removeFromSuperview()
+        viewController.removeFromParentViewController()
     }
 
-    private func requestPageViewController(index: Int) -> UIViewController? {
+    private func requestViewController(index: Int) -> UIViewController? {
         var newViewController: UIViewController?
-        if index + 1 < self.pageViewControllers.count {
-            if let controllerAfterNewOne = self.pageViewControllers[index + 1] {
+        if index + 1 < self.viewControllers.count {
+            if let controllerAfterNewOne = self.viewControllers[index + 1] {
                 newViewController = self.viewControllerBeforeViewController(controllerAfterNewOne)
             }
         }
         if index - 1 > 0 {
-            if let controllerBeforeNewOne = self.pageViewControllers[index - 1] {
+            if let controllerBeforeNewOne = self.viewControllers[index - 1] {
                 newViewController = self.viewControllerAfterViewController(controllerBeforeNewOne)
             }
         }
         if let viewController = newViewController {
-            self.pageViewControllers[index] = viewController
+            self.viewControllers[index] = viewController
         }
         return newViewController
     }
@@ -255,7 +261,7 @@ public class BouncyPageViewController: UIViewController, UIScrollViewDelegate {
     private var lastLocationInView = CGPoint.zero
 
     private func angle(velocity: CGFloat, relativeLocation: CGPoint) -> CGFloat {
-        var currentOverlap = self.pageContentInset * max(-1, min(1, velocity / 1500.0))
+        var currentOverlap = self.pageContentInset * max(-1, min(1, velocity / 1000.0))
         let halfWidth = view!.bounds.width / 2
         let distanceToCenterMultiplier = (relativeLocation.x - halfWidth) / halfWidth
         currentOverlap *= distanceToCenterMultiplier
@@ -266,13 +272,13 @@ public class BouncyPageViewController: UIViewController, UIScrollViewDelegate {
     //MARK: - Overscroll Bounce
     private func overscrolledToBottom() -> Bool {
         let overscrolledToBottom = self.contentOffset() > self.baseOffset() + self.maxOverscroll()
-        let noLastPage =  self.pageViewControllers.last! == nil
+        let noLastPage =  self.viewControllers.last! == nil
         return overscrolledToBottom && noLastPage
     }
 
     private func overscrolledToTop() -> Bool {
         let overscrolledToTop = self.contentOffset() < self.maxOverscroll()
-        let noFirstPage = self.pageViewControllers.first! == nil
+        let noFirstPage = self.viewControllers.first! == nil
         return overscrolledToTop && noFirstPage
     }
 

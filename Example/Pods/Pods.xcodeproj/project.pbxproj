@@ -1,0 +1,978 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05E66A671FFEB63DBEBB550A2029FB23 /* Pods-BouncyPageViewController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE167FEC456F333F59FE5D25F9FC059B /* Pods-BouncyPageViewController_Tests-dummy.m */; };
+		0A25E78247A611D74A6097253382FF77 /* UIColor+PlatformIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = C9768052F0C4D36C8C79B6E2C15E5177 /* UIColor+PlatformIndependence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		245C84D7A79983D332BE77A3ACDFFF58 /* RBBCustomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 59D5ECF05A762B5F8F88D5866AA56856 /* RBBCustomAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28EEC28159DD14526CECFC678FE190EC /* RBBCubicBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 303EB31D7B73691F555890DE6808351D /* RBBCubicBezier.m */; };
+		347C95AE85ED2ACEF7BEC81B3B889626 /* RBBLinearInterpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = A101FA779365A23F43C1BA3FA8DA53F7 /* RBBLinearInterpolation.m */; };
+		379C3965FE79FEB851255A5BBDED7A99 /* Pods-BouncyPageViewController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E4B7AEE7061887BE06D06971CDE9977B /* Pods-BouncyPageViewController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42CDC1CE05CBFE5BB0B2B06BF2183781 /* RBBAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 32532300DFB206BF37748087505C91F1 /* RBBAnimation.m */; };
+		4ABC16A2AEF26AF973427C5EA5F5153C /* NSValue+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 6064A88C86B682EF3BFAB61C533B97BB /* NSValue+PlatformIndependence.m */; };
+		4D5435059C27A8F81873A80E9E6AFB09 /* RBBBlockBasedArray.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB4691481BF8130BD499B47097056AA /* RBBBlockBasedArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60120E7A99B46D657A326279B1620F0B /* RBBEasingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C676A235CE520C4B299CCDC8212157E /* RBBEasingFunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6173BBAF5D6709F063E8C4E129AC9C9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC50F82CA04C8D4F71227472B6A56B2 /* Foundation.framework */; };
+		6B808A90C68BB93D1E647310DE49E6D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC50F82CA04C8D4F71227472B6A56B2 /* Foundation.framework */; };
+		6CABB44AEC1B10582427F21AE742C543 /* NSValue+PlatformIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2D028C7DA6946FC56F39799EB123F9 /* NSValue+PlatformIndependence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		732081BB8D37AD3AB34E12DBB0D5344F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC50F82CA04C8D4F71227472B6A56B2 /* Foundation.framework */; };
+		77D830809BA7B415CAFA961E82E77C36 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB172B28DCA2F4FF1FDB1CC29E1DF59 /* QuartzCore.framework */; };
+		8A458229B432AD677E31BE21B9F4FF3E /* RBBAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 732096E0501539C463FFAF715BA0A996 /* RBBAnimation-dummy.m */; };
+		90D133843F619CDBBFC85DA260DCEEEB /* BouncyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4137127FC43A28039AA10645A700192 /* BouncyPageViewController.swift */; };
+		9394095715589348C0A8DAA615476645 /* RBBTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A750E715BA2FA4377CC8A29A1D420E3 /* RBBTweenAnimation.m */; };
+		94FE224268F62F8716EEFE5CDE248758 /* RBBBlockBasedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E9B8D329F93993E6B6FAD12FB344C /* RBBBlockBasedArray.m */; };
+		970FAF170D39904EAB1F4A73D2FCB2D4 /* RBBCubicBezier.h in Headers */ = {isa = PBXBuildFile; fileRef = CAB02DD111CFFFA211F2FB8865804C45 /* RBBCubicBezier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7A0E3ED134B78468335B0438621D42D /* RBBAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = EB45E21A4757A83BC5308ADC8E489B93 /* RBBAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0354045865B74F6B433C2E69214AF3A /* RBBAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1562FCAB6685C123A5F8007E0983713E /* RBBAnimation.framework */; };
+		C8EE6D5FA383578C07B1B4889D85BC56 /* BouncyPageViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED05CAC888C71912E8587904EE32943 /* BouncyPageViewController-dummy.m */; };
+		CABB34A64AA39D5F9AD2D58CCF532A05 /* UIColor+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = A250F04DF6BF4ED8D8B5D8E6B7158D42 /* UIColor+PlatformIndependence.m */; };
+		D5DBBA887B26406027B34BADAB8CD901 /* RBBCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73725A88B8D1A380E3EE3616D929CCC2 /* RBBCustomAnimation.m */; };
+		DE1201670E4A2330B2B53AC7AC26A55A /* RBBSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ED8C874E6CE59EF158D75224B9507C8 /* RBBSpringAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E42431BB3B00B273E264BAF6A54CFF56 /* Pods-BouncyPageViewController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79A1D761E79485801EFDA16E823819DB /* Pods-BouncyPageViewController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E71DFF26A8E914EBB0C640B3F25A40E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC50F82CA04C8D4F71227472B6A56B2 /* Foundation.framework */; };
+		E76AE3983AE363C25B23E89C1099609B /* Pods-BouncyPageViewController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 509DE35C05746ED5AEE1B1327239E72E /* Pods-BouncyPageViewController_Example-dummy.m */; };
+		E9A5636A4033AAD2F21633688E925769 /* RBBSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 556C9BB7D7DBA89DF3CD64750A413ED2 /* RBBSpringAnimation.m */; };
+		F3757F5316AEE33482470516BCF63D14 /* BouncyPageViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ED58064D9EE0D465E791E8EC1FAAAC4 /* BouncyPageViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAE5B43C553879F8A3ADF45CEDDA0A12 /* RBBLinearInterpolation.h in Headers */ = {isa = PBXBuildFile; fileRef = FBAB1324E4B4EE1C3E1C4DF0DCBE5990 /* RBBLinearInterpolation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBDD862A8DDFE20E375A81A08E550698 /* RBBAnimation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A9A67A0B99D58B864037CCD57D40CC7B /* RBBAnimation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCAEBD2F8A6F6BC3F145E915E9516438 /* RBBEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D90E284FDE73C98EA579B814E4D332C9 /* RBBEasingFunction.m */; };
+		FF5E847C51A4E0497A88FBA1FB3DB261 /* RBBTweenAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 39F7526A5C3EB356613D21F9C3463325 /* RBBTweenAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FA69A59892CB53B8F516AC72EFF0104 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDBB5669BD79C875D7F8A6A05B868517;
+			remoteInfo = RBBAnimation;
+		};
+		CD6BB63EB681896567D4307BBD8A1613 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A89F0A9F0A5E1B682EA110FABD202EE;
+			remoteInfo = BouncyPageViewController;
+		};
+		F578D8D5302448A27864C30FDEC5C9F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDBB5669BD79C875D7F8A6A05B868517;
+			remoteInfo = RBBAnimation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		071826B35C46935C7095FC8766A18A1C /* Pods-BouncyPageViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BouncyPageViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		071F403A440232A8F24D1760722AB0D7 /* RBBAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RBBAnimation-prefix.pch"; sourceTree = "<group>"; };
+		073B613DB63234CDA462B55780BB6498 /* Pods-BouncyPageViewController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BouncyPageViewController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		086033CE1D9CB896295EF1F7F6FC2F39 /* Pods_BouncyPageViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BouncyPageViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09A93EB12F2052AF50943B7C1C27EC50 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09CCCC33B62882844CB8D79ED9D6B09C /* RBBAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RBBAnimation.xcconfig; sourceTree = "<group>"; };
+		0BAD6C41343317C5084A14407BA3C2F1 /* RBBAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RBBAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E2843AC0162D3C990E6F38A6AEF0FA5 /* Pods-BouncyPageViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BouncyPageViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
+		0ED58064D9EE0D465E791E8EC1FAAAC4 /* BouncyPageViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BouncyPageViewController-umbrella.h"; sourceTree = "<group>"; };
+		0ED8C874E6CE59EF158D75224B9507C8 /* RBBSpringAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBSpringAnimation.h; path = RBBAnimation/RBBSpringAnimation.h; sourceTree = "<group>"; };
+		1562FCAB6685C123A5F8007E0983713E /* RBBAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RBBAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B9E9B8D329F93993E6B6FAD12FB344C /* RBBBlockBasedArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBBlockBasedArray.m; path = RBBAnimation/RBBBlockBasedArray.m; sourceTree = "<group>"; };
+		1EC50F82CA04C8D4F71227472B6A56B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		21FE7BE05A2645D96E69B36BD1D95040 /* Pods-BouncyPageViewController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BouncyPageViewController_Example-resources.sh"; sourceTree = "<group>"; };
+		24C6CD08940F301D70962E89D128D10B /* Pods-BouncyPageViewController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BouncyPageViewController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2C676A235CE520C4B299CCDC8212157E /* RBBEasingFunction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBEasingFunction.h; path = RBBAnimation/RBBEasingFunction.h; sourceTree = "<group>"; };
+		303EB31D7B73691F555890DE6808351D /* RBBCubicBezier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBCubicBezier.m; path = RBBAnimation/RBBCubicBezier.m; sourceTree = "<group>"; };
+		32532300DFB206BF37748087505C91F1 /* RBBAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBAnimation.m; path = RBBAnimation/RBBAnimation.m; sourceTree = "<group>"; };
+		39F7526A5C3EB356613D21F9C3463325 /* RBBTweenAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBTweenAnimation.h; path = RBBAnimation/RBBTweenAnimation.h; sourceTree = "<group>"; };
+		414FC3AAE45DBB0A4C77C3221663788D /* Pods-BouncyPageViewController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BouncyPageViewController_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		44930E398CC7767699CBB5299C85323D /* Pods-BouncyPageViewController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BouncyPageViewController_Example-frameworks.sh"; sourceTree = "<group>"; };
+		4D97A90CAB3158852A2102DAB44B180F /* RBBAnimation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RBBAnimation.modulemap; sourceTree = "<group>"; };
+		509DE35C05746ED5AEE1B1327239E72E /* Pods-BouncyPageViewController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BouncyPageViewController_Example-dummy.m"; sourceTree = "<group>"; };
+		5143F0E0A53EF8DE01ED89E332C2B0F8 /* Pods-BouncyPageViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BouncyPageViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		556C9BB7D7DBA89DF3CD64750A413ED2 /* RBBSpringAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBSpringAnimation.m; path = RBBAnimation/RBBSpringAnimation.m; sourceTree = "<group>"; };
+		59D5ECF05A762B5F8F88D5866AA56856 /* RBBCustomAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBCustomAnimation.h; path = RBBAnimation/RBBCustomAnimation.h; sourceTree = "<group>"; };
+		5A750E715BA2FA4377CC8A29A1D420E3 /* RBBTweenAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBTweenAnimation.m; path = RBBAnimation/RBBTweenAnimation.m; sourceTree = "<group>"; };
+		5F0EAD6580C77FF1D27DA74A3BF79C54 /* Pods-BouncyPageViewController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BouncyPageViewController_Tests-resources.sh"; sourceTree = "<group>"; };
+		6064A88C86B682EF3BFAB61C533B97BB /* NSValue+PlatformIndependence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValue+PlatformIndependence.m"; path = "RBBAnimation/NSValue+PlatformIndependence.m"; sourceTree = "<group>"; };
+		6558B4FFB571AC0793572422DD9EB0AB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D1A18D29199D04E5DC13859E3704EFA /* BouncyPageViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BouncyPageViewController-prefix.pch"; sourceTree = "<group>"; };
+		732096E0501539C463FFAF715BA0A996 /* RBBAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RBBAnimation-dummy.m"; sourceTree = "<group>"; };
+		73725A88B8D1A380E3EE3616D929CCC2 /* RBBCustomAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBCustomAnimation.m; path = RBBAnimation/RBBCustomAnimation.m; sourceTree = "<group>"; };
+		743BA95C60ACCD3925E3D588E50B2E7E /* BouncyPageViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BouncyPageViewController.modulemap; sourceTree = "<group>"; };
+		7716AF2E76FAE93A0F4878E691E1CB17 /* Pods-BouncyPageViewController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BouncyPageViewController_Tests.modulemap"; sourceTree = "<group>"; };
+		79A1D761E79485801EFDA16E823819DB /* Pods-BouncyPageViewController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BouncyPageViewController_Example-umbrella.h"; sourceTree = "<group>"; };
+		7A4EC624F8E1E7111AB18511E443DC72 /* Pods-BouncyPageViewController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BouncyPageViewController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		8E758AFBDA4584FE98A2B9D2D56F5512 /* Pods-BouncyPageViewController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BouncyPageViewController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EB172B28DCA2F4FF1FDB1CC29E1DF59 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		9ED05CAC888C71912E8587904EE32943 /* BouncyPageViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BouncyPageViewController-dummy.m"; sourceTree = "<group>"; };
+		A101FA779365A23F43C1BA3FA8DA53F7 /* RBBLinearInterpolation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBLinearInterpolation.m; path = RBBAnimation/RBBLinearInterpolation.m; sourceTree = "<group>"; };
+		A250F04DF6BF4ED8D8B5D8E6B7158D42 /* UIColor+PlatformIndependence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+PlatformIndependence.m"; path = "RBBAnimation/UIColor+PlatformIndependence.m"; sourceTree = "<group>"; };
+		A45E0F371271D1CA8BB07EF8A72B0DFB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4BA7611F8F63F1BB797C91E62E010F8 /* Pods_BouncyPageViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BouncyPageViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A691A1FC1F36668A7E424181F40F8E3A /* BouncyPageViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BouncyPageViewController.xcconfig; sourceTree = "<group>"; };
+		A9A67A0B99D58B864037CCD57D40CC7B /* RBBAnimation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RBBAnimation-umbrella.h"; sourceTree = "<group>"; };
+		C34BCDEF889F969A2CFA8A2EC599D802 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4137127FC43A28039AA10645A700192 /* BouncyPageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BouncyPageViewController.swift; sourceTree = "<group>"; };
+		C9768052F0C4D36C8C79B6E2C15E5177 /* UIColor+PlatformIndependence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+PlatformIndependence.h"; path = "RBBAnimation/UIColor+PlatformIndependence.h"; sourceTree = "<group>"; };
+		CAB02DD111CFFFA211F2FB8865804C45 /* RBBCubicBezier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBCubicBezier.h; path = RBBAnimation/RBBCubicBezier.h; sourceTree = "<group>"; };
+		CE167FEC456F333F59FE5D25F9FC059B /* Pods-BouncyPageViewController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BouncyPageViewController_Tests-dummy.m"; sourceTree = "<group>"; };
+		D90E284FDE73C98EA579B814E4D332C9 /* RBBEasingFunction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBEasingFunction.m; path = RBBAnimation/RBBEasingFunction.m; sourceTree = "<group>"; };
+		DAB4691481BF8130BD499B47097056AA /* RBBBlockBasedArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBBlockBasedArray.h; path = RBBAnimation/RBBBlockBasedArray.h; sourceTree = "<group>"; };
+		DC2D028C7DA6946FC56F39799EB123F9 /* NSValue+PlatformIndependence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValue+PlatformIndependence.h"; path = "RBBAnimation/NSValue+PlatformIndependence.h"; sourceTree = "<group>"; };
+		DD6A33DB91C8DA7AA778AC3C95351580 /* Pods-BouncyPageViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BouncyPageViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E4B7AEE7061887BE06D06971CDE9977B /* Pods-BouncyPageViewController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BouncyPageViewController_Tests-umbrella.h"; sourceTree = "<group>"; };
+		E5A970EB07F64330A44507B396F1A8AA /* Pods-BouncyPageViewController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BouncyPageViewController_Example.modulemap"; sourceTree = "<group>"; };
+		EB45E21A4757A83BC5308ADC8E489B93 /* RBBAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBAnimation.h; path = RBBAnimation/RBBAnimation.h; sourceTree = "<group>"; };
+		EBA4A34305DA192146D3DBCDE41D3D18 /* BouncyPageViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BouncyPageViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBAB1324E4B4EE1C3E1C4DF0DCBE5990 /* RBBLinearInterpolation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBLinearInterpolation.h; path = RBBAnimation/RBBLinearInterpolation.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55885FAD604197B70A0C0E8C0623CD95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B808A90C68BB93D1E647310DE49E6D9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F51B49596A91E86D80F194AB9342B50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6173BBAF5D6709F063E8C4E129AC9C9D /* Foundation.framework in Frameworks */,
+				B0354045865B74F6B433C2E69214AF3A /* RBBAnimation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2EA2F292BFEC1B5A802B1488ED7AC48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				732081BB8D37AD3AB34E12DBB0D5344F /* Foundation.framework in Frameworks */,
+				77D830809BA7B415CAFA961E82E77C36 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9780311350EFFBC855114B35C4BD563 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E71DFF26A8E914EBB0C640B3F25A40E5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12CD5839CC357F80A43B5B1D9059E091 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1562FCAB6685C123A5F8007E0983713E /* RBBAnimation.framework */,
+				6FDA9F798C15BE3B9259BA0A520FFDDA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B4F6FA3DD87191E08B2ED1CD765C54D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4BC9B7DA63782A66D668656A6204D9B3 /* RBBAnimation */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		354ED9737232C0CCD81A0279E2BA934F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C4137127FC43A28039AA10645A700192 /* BouncyPageViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		49E0C122C1CD1A354F8D6ADFA63C920D /* Pods-BouncyPageViewController_Example */ = {
+			isa = PBXGroup;
+			children = (
+				C34BCDEF889F969A2CFA8A2EC599D802 /* Info.plist */,
+				E5A970EB07F64330A44507B396F1A8AA /* Pods-BouncyPageViewController_Example.modulemap */,
+				8E758AFBDA4584FE98A2B9D2D56F5512 /* Pods-BouncyPageViewController_Example-acknowledgements.markdown */,
+				7A4EC624F8E1E7111AB18511E443DC72 /* Pods-BouncyPageViewController_Example-acknowledgements.plist */,
+				509DE35C05746ED5AEE1B1327239E72E /* Pods-BouncyPageViewController_Example-dummy.m */,
+				44930E398CC7767699CBB5299C85323D /* Pods-BouncyPageViewController_Example-frameworks.sh */,
+				21FE7BE05A2645D96E69B36BD1D95040 /* Pods-BouncyPageViewController_Example-resources.sh */,
+				79A1D761E79485801EFDA16E823819DB /* Pods-BouncyPageViewController_Example-umbrella.h */,
+				5143F0E0A53EF8DE01ED89E332C2B0F8 /* Pods-BouncyPageViewController_Example.debug.xcconfig */,
+				0E2843AC0162D3C990E6F38A6AEF0FA5 /* Pods-BouncyPageViewController_Example.release.xcconfig */,
+			);
+			name = "Pods-BouncyPageViewController_Example";
+			path = "Target Support Files/Pods-BouncyPageViewController_Example";
+			sourceTree = "<group>";
+		};
+		4BC9B7DA63782A66D668656A6204D9B3 /* RBBAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				DC2D028C7DA6946FC56F39799EB123F9 /* NSValue+PlatformIndependence.h */,
+				6064A88C86B682EF3BFAB61C533B97BB /* NSValue+PlatformIndependence.m */,
+				EB45E21A4757A83BC5308ADC8E489B93 /* RBBAnimation.h */,
+				32532300DFB206BF37748087505C91F1 /* RBBAnimation.m */,
+				DAB4691481BF8130BD499B47097056AA /* RBBBlockBasedArray.h */,
+				1B9E9B8D329F93993E6B6FAD12FB344C /* RBBBlockBasedArray.m */,
+				CAB02DD111CFFFA211F2FB8865804C45 /* RBBCubicBezier.h */,
+				303EB31D7B73691F555890DE6808351D /* RBBCubicBezier.m */,
+				59D5ECF05A762B5F8F88D5866AA56856 /* RBBCustomAnimation.h */,
+				73725A88B8D1A380E3EE3616D929CCC2 /* RBBCustomAnimation.m */,
+				2C676A235CE520C4B299CCDC8212157E /* RBBEasingFunction.h */,
+				D90E284FDE73C98EA579B814E4D332C9 /* RBBEasingFunction.m */,
+				FBAB1324E4B4EE1C3E1C4DF0DCBE5990 /* RBBLinearInterpolation.h */,
+				A101FA779365A23F43C1BA3FA8DA53F7 /* RBBLinearInterpolation.m */,
+				0ED8C874E6CE59EF158D75224B9507C8 /* RBBSpringAnimation.h */,
+				556C9BB7D7DBA89DF3CD64750A413ED2 /* RBBSpringAnimation.m */,
+				39F7526A5C3EB356613D21F9C3463325 /* RBBTweenAnimation.h */,
+				5A750E715BA2FA4377CC8A29A1D420E3 /* RBBTweenAnimation.m */,
+				C9768052F0C4D36C8C79B6E2C15E5177 /* UIColor+PlatformIndependence.h */,
+				A250F04DF6BF4ED8D8B5D8E6B7158D42 /* UIColor+PlatformIndependence.m */,
+				C2484DD29C881EE2537A5F2AD19F8853 /* Support Files */,
+			);
+			path = RBBAnimation;
+			sourceTree = "<group>";
+		};
+		5CEB33386B2C6868C084B3F804B532B6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				49E0C122C1CD1A354F8D6ADFA63C920D /* Pods-BouncyPageViewController_Example */,
+				D2B48DB0EF366611AE11E20268A531E8 /* Pods-BouncyPageViewController_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6FDA9F798C15BE3B9259BA0A520FFDDA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1EC50F82CA04C8D4F71227472B6A56B2 /* Foundation.framework */,
+				9EB172B28DCA2F4FF1FDB1CC29E1DF59 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				FD2CA2F8698BF4DCD6C3C5F8E2F8D649 /* Development Pods */,
+				12CD5839CC357F80A43B5B1D9059E091 /* Frameworks */,
+				1B4F6FA3DD87191E08B2ED1CD765C54D /* Pods */,
+				BFAA25E8BFE1438C2344923E43903E64 /* Products */,
+				5CEB33386B2C6868C084B3F804B532B6 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		830055151322D7384DEAF4642BDF00AE /* BouncyPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				354ED9737232C0CCD81A0279E2BA934F /* Classes */,
+			);
+			path = BouncyPageViewController;
+			sourceTree = "<group>";
+		};
+		BFAA25E8BFE1438C2344923E43903E64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBA4A34305DA192146D3DBCDE41D3D18 /* BouncyPageViewController.framework */,
+				086033CE1D9CB896295EF1F7F6FC2F39 /* Pods_BouncyPageViewController_Example.framework */,
+				A4BA7611F8F63F1BB797C91E62E010F8 /* Pods_BouncyPageViewController_Tests.framework */,
+				0BAD6C41343317C5084A14407BA3C2F1 /* RBBAnimation.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2484DD29C881EE2537A5F2AD19F8853 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A45E0F371271D1CA8BB07EF8A72B0DFB /* Info.plist */,
+				4D97A90CAB3158852A2102DAB44B180F /* RBBAnimation.modulemap */,
+				09CCCC33B62882844CB8D79ED9D6B09C /* RBBAnimation.xcconfig */,
+				732096E0501539C463FFAF715BA0A996 /* RBBAnimation-dummy.m */,
+				071F403A440232A8F24D1760722AB0D7 /* RBBAnimation-prefix.pch */,
+				A9A67A0B99D58B864037CCD57D40CC7B /* RBBAnimation-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RBBAnimation";
+			sourceTree = "<group>";
+		};
+		C9EB742007E3F3FDB632BCC29716E47A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				743BA95C60ACCD3925E3D588E50B2E7E /* BouncyPageViewController.modulemap */,
+				A691A1FC1F36668A7E424181F40F8E3A /* BouncyPageViewController.xcconfig */,
+				9ED05CAC888C71912E8587904EE32943 /* BouncyPageViewController-dummy.m */,
+				6D1A18D29199D04E5DC13859E3704EFA /* BouncyPageViewController-prefix.pch */,
+				0ED58064D9EE0D465E791E8EC1FAAAC4 /* BouncyPageViewController-umbrella.h */,
+				6558B4FFB571AC0793572422DD9EB0AB /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/BouncyPageViewController";
+			sourceTree = "<group>";
+		};
+		D2B48DB0EF366611AE11E20268A531E8 /* Pods-BouncyPageViewController_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				09A93EB12F2052AF50943B7C1C27EC50 /* Info.plist */,
+				7716AF2E76FAE93A0F4878E691E1CB17 /* Pods-BouncyPageViewController_Tests.modulemap */,
+				073B613DB63234CDA462B55780BB6498 /* Pods-BouncyPageViewController_Tests-acknowledgements.markdown */,
+				24C6CD08940F301D70962E89D128D10B /* Pods-BouncyPageViewController_Tests-acknowledgements.plist */,
+				CE167FEC456F333F59FE5D25F9FC059B /* Pods-BouncyPageViewController_Tests-dummy.m */,
+				414FC3AAE45DBB0A4C77C3221663788D /* Pods-BouncyPageViewController_Tests-frameworks.sh */,
+				5F0EAD6580C77FF1D27DA74A3BF79C54 /* Pods-BouncyPageViewController_Tests-resources.sh */,
+				E4B7AEE7061887BE06D06971CDE9977B /* Pods-BouncyPageViewController_Tests-umbrella.h */,
+				071826B35C46935C7095FC8766A18A1C /* Pods-BouncyPageViewController_Tests.debug.xcconfig */,
+				DD6A33DB91C8DA7AA778AC3C95351580 /* Pods-BouncyPageViewController_Tests.release.xcconfig */,
+			);
+			name = "Pods-BouncyPageViewController_Tests";
+			path = "Target Support Files/Pods-BouncyPageViewController_Tests";
+			sourceTree = "<group>";
+		};
+		ECAC71336F479CE6F3EFF65E937D132B /* BouncyPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				830055151322D7384DEAF4642BDF00AE /* BouncyPageViewController */,
+				C9EB742007E3F3FDB632BCC29716E47A /* Support Files */,
+			);
+			name = BouncyPageViewController;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		FD2CA2F8698BF4DCD6C3C5F8E2F8D649 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECAC71336F479CE6F3EFF65E937D132B /* BouncyPageViewController */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0ED5302C23DC704DA7B5B91D18BF9C70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E42431BB3B00B273E264BAF6A54CFF56 /* Pods-BouncyPageViewController_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5049D7F7048C66B513707051BBA8C047 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				379C3965FE79FEB851255A5BBDED7A99 /* Pods-BouncyPageViewController_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE640C4ABBC2DC4CBFB26B062EAF8E6C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3757F5316AEE33482470516BCF63D14 /* BouncyPageViewController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2ACF3B7FC5DE92C5B91A273A5693789 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CABB44AEC1B10582427F21AE742C543 /* NSValue+PlatformIndependence.h in Headers */,
+				FBDD862A8DDFE20E375A81A08E550698 /* RBBAnimation-umbrella.h in Headers */,
+				A7A0E3ED134B78468335B0438621D42D /* RBBAnimation.h in Headers */,
+				4D5435059C27A8F81873A80E9E6AFB09 /* RBBBlockBasedArray.h in Headers */,
+				970FAF170D39904EAB1F4A73D2FCB2D4 /* RBBCubicBezier.h in Headers */,
+				245C84D7A79983D332BE77A3ACDFFF58 /* RBBCustomAnimation.h in Headers */,
+				60120E7A99B46D657A326279B1620F0B /* RBBEasingFunction.h in Headers */,
+				FAE5B43C553879F8A3ADF45CEDDA0A12 /* RBBLinearInterpolation.h in Headers */,
+				DE1201670E4A2330B2B53AC7AC26A55A /* RBBSpringAnimation.h in Headers */,
+				FF5E847C51A4E0497A88FBA1FB3DB261 /* RBBTweenAnimation.h in Headers */,
+				0A25E78247A611D74A6097253382FF77 /* UIColor+PlatformIndependence.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3A89F0A9F0A5E1B682EA110FABD202EE /* BouncyPageViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3565F72B6D399AB027D04869343736D3 /* Build configuration list for PBXNativeTarget "BouncyPageViewController" */;
+			buildPhases = (
+				3F1BF4B8DD48CC27149BBD907C1C7FC6 /* Sources */,
+				8F51B49596A91E86D80F194AB9342B50 /* Frameworks */,
+				BE640C4ABBC2DC4CBFB26B062EAF8E6C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11D85CDEC5C23830FD5666D15150E5BA /* PBXTargetDependency */,
+			);
+			name = BouncyPageViewController;
+			productName = BouncyPageViewController;
+			productReference = EBA4A34305DA192146D3DBCDE41D3D18 /* BouncyPageViewController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5B95D0F7E13AC0EFE5D178195683C8AE /* Pods-BouncyPageViewController_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05AA301247038280C5D55FE14F6FAACC /* Build configuration list for PBXNativeTarget "Pods-BouncyPageViewController_Tests" */;
+			buildPhases = (
+				8BC788D8BE9C312F32F1759182A97D48 /* Sources */,
+				C9780311350EFFBC855114B35C4BD563 /* Frameworks */,
+				5049D7F7048C66B513707051BBA8C047 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BouncyPageViewController_Tests";
+			productName = "Pods-BouncyPageViewController_Tests";
+			productReference = A4BA7611F8F63F1BB797C91E62E010F8 /* Pods_BouncyPageViewController_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9B027C42C44E5B2BBF640FA2A7DC2182 /* Pods-BouncyPageViewController_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CBD0F4B3FE6E2895059C7967F8652B0 /* Build configuration list for PBXNativeTarget "Pods-BouncyPageViewController_Example" */;
+			buildPhases = (
+				ED3053CF403D8770A569559B04F09427 /* Sources */,
+				55885FAD604197B70A0C0E8C0623CD95 /* Frameworks */,
+				0ED5302C23DC704DA7B5B91D18BF9C70 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B646A0B3ACD582896F411C3E4AC05F9D /* PBXTargetDependency */,
+				D710BD0A8B2C5089689BD7301AB8FEC1 /* PBXTargetDependency */,
+			);
+			name = "Pods-BouncyPageViewController_Example";
+			productName = "Pods-BouncyPageViewController_Example";
+			productReference = 086033CE1D9CB896295EF1F7F6FC2F39 /* Pods_BouncyPageViewController_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CDBB5669BD79C875D7F8A6A05B868517 /* RBBAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E56E8F538A7069D17460393457C94E28 /* Build configuration list for PBXNativeTarget "RBBAnimation" */;
+			buildPhases = (
+				351FF9FCCAA705A6E86E04AD445F59E7 /* Sources */,
+				B2EA2F292BFEC1B5A802B1488ED7AC48 /* Frameworks */,
+				C2ACF3B7FC5DE92C5B91A273A5693789 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RBBAnimation;
+			productName = RBBAnimation;
+			productReference = 0BAD6C41343317C5084A14407BA3C2F1 /* RBBAnimation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = BFAA25E8BFE1438C2344923E43903E64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A89F0A9F0A5E1B682EA110FABD202EE /* BouncyPageViewController */,
+				9B027C42C44E5B2BBF640FA2A7DC2182 /* Pods-BouncyPageViewController_Example */,
+				5B95D0F7E13AC0EFE5D178195683C8AE /* Pods-BouncyPageViewController_Tests */,
+				CDBB5669BD79C875D7F8A6A05B868517 /* RBBAnimation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		351FF9FCCAA705A6E86E04AD445F59E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ABC16A2AEF26AF973427C5EA5F5153C /* NSValue+PlatformIndependence.m in Sources */,
+				8A458229B432AD677E31BE21B9F4FF3E /* RBBAnimation-dummy.m in Sources */,
+				42CDC1CE05CBFE5BB0B2B06BF2183781 /* RBBAnimation.m in Sources */,
+				94FE224268F62F8716EEFE5CDE248758 /* RBBBlockBasedArray.m in Sources */,
+				28EEC28159DD14526CECFC678FE190EC /* RBBCubicBezier.m in Sources */,
+				D5DBBA887B26406027B34BADAB8CD901 /* RBBCustomAnimation.m in Sources */,
+				FCAEBD2F8A6F6BC3F145E915E9516438 /* RBBEasingFunction.m in Sources */,
+				347C95AE85ED2ACEF7BEC81B3B889626 /* RBBLinearInterpolation.m in Sources */,
+				E9A5636A4033AAD2F21633688E925769 /* RBBSpringAnimation.m in Sources */,
+				9394095715589348C0A8DAA615476645 /* RBBTweenAnimation.m in Sources */,
+				CABB34A64AA39D5F9AD2D58CCF532A05 /* UIColor+PlatformIndependence.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1BF4B8DD48CC27149BBD907C1C7FC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8EE6D5FA383578C07B1B4889D85BC56 /* BouncyPageViewController-dummy.m in Sources */,
+				90D133843F619CDBBFC85DA260DCEEEB /* BouncyPageViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BC788D8BE9C312F32F1759182A97D48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05E66A671FFEB63DBEBB550A2029FB23 /* Pods-BouncyPageViewController_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED3053CF403D8770A569559B04F09427 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E76AE3983AE363C25B23E89C1099609B /* Pods-BouncyPageViewController_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11D85CDEC5C23830FD5666D15150E5BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RBBAnimation;
+			target = CDBB5669BD79C875D7F8A6A05B868517 /* RBBAnimation */;
+			targetProxy = F578D8D5302448A27864C30FDEC5C9F5 /* PBXContainerItemProxy */;
+		};
+		B646A0B3ACD582896F411C3E4AC05F9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BouncyPageViewController;
+			target = 3A89F0A9F0A5E1B682EA110FABD202EE /* BouncyPageViewController */;
+			targetProxy = CD6BB63EB681896567D4307BBD8A1613 /* PBXContainerItemProxy */;
+		};
+		D710BD0A8B2C5089689BD7301AB8FEC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RBBAnimation;
+			target = CDBB5669BD79C875D7F8A6A05B868517 /* RBBAnimation */;
+			targetProxy = 3FA69A59892CB53B8F516AC72EFF0104 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0336050DCBCFF790A430E3654ED2C6E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A691A1FC1F36668A7E424181F40F8E3A /* BouncyPageViewController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BouncyPageViewController/BouncyPageViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BouncyPageViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BouncyPageViewController/BouncyPageViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BouncyPageViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		04D62008EBDAED07B064988027017667 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD6A33DB91C8DA7AA778AC3C95351580 /* Pods-BouncyPageViewController_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BouncyPageViewController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BouncyPageViewController_Tests/Pods-BouncyPageViewController_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BouncyPageViewController_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4504FBB7D77F3414CEAB20A0FD2DD640 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09CCCC33B62882844CB8D79ED9D6B09C /* RBBAnimation.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RBBAnimation/RBBAnimation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RBBAnimation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RBBAnimation/RBBAnimation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = RBBAnimation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6FBAA14E59D74C0BB3CD10C38B9AF22A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 071826B35C46935C7095FC8766A18A1C /* Pods-BouncyPageViewController_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BouncyPageViewController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BouncyPageViewController_Tests/Pods-BouncyPageViewController_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BouncyPageViewController_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9DBEB4DCA9CAAF4C383753260AF4A3F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E2843AC0162D3C990E6F38A6AEF0FA5 /* Pods-BouncyPageViewController_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BouncyPageViewController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BouncyPageViewController_Example/Pods-BouncyPageViewController_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BouncyPageViewController_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A356CC9A85DF2842460EEB32248AC8F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5143F0E0A53EF8DE01ED89E332C2B0F8 /* Pods-BouncyPageViewController_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BouncyPageViewController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BouncyPageViewController_Example/Pods-BouncyPageViewController_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BouncyPageViewController_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A7364447D8B8A3F4CDDB999846940BCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A691A1FC1F36668A7E424181F40F8E3A /* BouncyPageViewController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BouncyPageViewController/BouncyPageViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BouncyPageViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BouncyPageViewController/BouncyPageViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BouncyPageViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C940C92FC2A98C0B7F0BCD0EA1B4B731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09CCCC33B62882844CB8D79ED9D6B09C /* RBBAnimation.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RBBAnimation/RBBAnimation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RBBAnimation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RBBAnimation/RBBAnimation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = RBBAnimation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05AA301247038280C5D55FE14F6FAACC /* Build configuration list for PBXNativeTarget "Pods-BouncyPageViewController_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FBAA14E59D74C0BB3CD10C38B9AF22A /* Debug */,
+				04D62008EBDAED07B064988027017667 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3565F72B6D399AB027D04869343736D3 /* Build configuration list for PBXNativeTarget "BouncyPageViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0336050DCBCFF790A430E3654ED2C6E9 /* Debug */,
+				A7364447D8B8A3F4CDDB999846940BCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CBD0F4B3FE6E2895059C7967F8652B0 /* Build configuration list for PBXNativeTarget "Pods-BouncyPageViewController_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A356CC9A85DF2842460EEB32248AC8F6 /* Debug */,
+				9DBEB4DCA9CAAF4C383753260AF4A3F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E56E8F538A7069D17460393457C94E28 /* Build configuration list for PBXNativeTarget "RBBAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C940C92FC2A98C0B7F0BCD0EA1B4B731 /* Debug */,
+				4504FBB7D77F3414CEAB20A0FD2DD640 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
