@@ -93,6 +93,18 @@ it, simply add the following line to your Podfile:
 pod "BouncyPageViewController"
 ```
 
+Due to Swift 3, you have to add this to the end of Podfile:
+
+```ruby
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '3.0'
+        end
+    end
+end 
+```
+
 ## Author
 
 Bohdan Orlov, bohdan.orlov@gmail.com
