@@ -1,43 +1,23 @@
-#
-# Be sure to run `pod lib lint BouncyPageViewController.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
 
 Pod::Spec.new do |s|
   s.name             = 'BouncyPageViewController'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of BouncyPageViewController.'
+  s.summary          = 'Page view controller with bounce effect'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Page view controller with bounce effect inspired by motion design by Stan Yakushevish.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/BouncyPageViewController'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/BohdanOrlov/BouncyPageViewController'
+  s.screenshots      = 'https://github.com/BohdanOrlov/BouncyPageViewController/blob/master/GIFs/dribble.gif?raw=true', 'https://github.com/BohdanOrlov/BouncyPageViewController/blob/master/GIFs/bouncyDemo.gif?raw=true'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Bohdan Orlov' => 'bohdan.orlov@corp.badoo.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/BouncyPageViewController.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Bohdan Orlov' => 'bohdan.orlov@gmail.com' }
+  s.source           = { :git => 'https://github.com/BohdanOrlov/BouncyPageViewController.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/bohdan_orlov'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'BouncyPageViewController/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'BouncyPageViewController' => ['BouncyPageViewController/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'RBBAnimation', '0.4.0'
 end
