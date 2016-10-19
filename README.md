@@ -62,8 +62,14 @@ func pageViewControllerDidScroll(pageViewController: BouncyPageViewController, o
 ```
 ## Example
 
-To run the example project, clone the repo, and run as usual.
+To run the example project, clone the repo
 
+```bash
+$ pod install
+
+```
+
+and run as usual.
 
 # Installation
 ## Requirements

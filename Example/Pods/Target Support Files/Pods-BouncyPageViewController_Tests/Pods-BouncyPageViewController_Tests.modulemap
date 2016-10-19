@@ -1,6 +1,0 @@
-framework module Pods_BouncyPageViewController_Tests {
-  umbrella header "Pods-BouncyPageViewController_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}
