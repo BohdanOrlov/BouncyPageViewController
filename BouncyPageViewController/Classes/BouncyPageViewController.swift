@@ -96,6 +96,11 @@ public class BouncyPageViewController: UIViewController, UIScrollViewDelegate {
     private(set) var viewControllers: [UIViewController?]!
 
     //MARK: - On Did Scroll
+    
+    public func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
+        return false
+    }
+    
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.shiftViewControllerIfNeeded()
         self.resetScrollViewContentOffsetIfNeeded()
@@ -106,7 +111,7 @@ public class BouncyPageViewController: UIViewController, UIScrollViewDelegate {
         let offset = self.contentOffset() - self.baseOffset()
         self.didScroll?(self, offset, abs(offset) / self.pageSize().height)
     }
-
+    
     private func shiftViewControllerIfNeeded() {
         if self.scrolledToNextPage() {
             if let removedVC = self.viewControllers.removeFirst() {
