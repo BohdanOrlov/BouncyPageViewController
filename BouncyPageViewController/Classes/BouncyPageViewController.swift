@@ -189,16 +189,18 @@ public class BouncyPageViewController: UIViewController, UIScrollViewDelegate {
     @objc private func didPan(recognizer: UIPanGestureRecognizer) {
         switch recognizer.state {
         case .ended, .cancelled, .failed:
-            self.scrollToNearestPage()
+            let velocity = recognizer.velocity(in: recognizer.view!)
+            let offset = contentOffset() - (velocity.y * baseOffset() / 5000)
+            self.scrollToNearestPage(targetContentOffset: offset)
         default: break
         }
         self.animatePageBounce(recognizer: recognizer)
     }
-    private func scrollToNearestPage() {
+    private func scrollToNearestPage(targetContentOffset: CGFloat) {
         let offset: CGFloat
-        if abs(self.baseOffset() - self.contentOffset()) < self.baseOffset() / 2  {
+        if abs(self.baseOffset() - targetContentOffset) < self.baseOffset() / 2  {
             offset = self.baseOffset()
-        } else if (self.contentOffset() - self.baseOffset() > 0) {
+        } else if (targetContentOffset - self.baseOffset() > 0) {
             offset = self.baseOffset() * 2
         } else {
             offset = 0
